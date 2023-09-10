@@ -12,7 +12,6 @@ double kd =0.5 ; // Derivative gain
 double Target_Rate = 90;//CFM
 double input,output;
 
-// Initialize PID controller
 PID pid(&input,&output,&Target_Rate,kp,ki,kd,DIRECT);
 
 void setup() {
