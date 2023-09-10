@@ -42,9 +42,9 @@ void loop() {
                  else { 
                   analogWrite(Motor_pin,0); // turn off the suction cleaner
                    }*/
-  Serial.print("Flow rate: ");
+  Serial.print("Flow rate:");
   Serial.print(flowRate);
-  Serial.print(" PID output: ");
+  Serial.print(" PID output:");
   Serial.println(output);
-  delay(500); 
+  delay(1000); 
 }
