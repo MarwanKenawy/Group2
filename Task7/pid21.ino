@@ -11,11 +11,10 @@ double ki =1.3 ; // Integral gain
 double kd =0.5 ; // Derivative gain 
 double Target_Rate = 90;//CFM
 double input,output;
-
+ // Initialize PID controller
 PID pid(&input,&output,&Target_Rate,kp,ki,kd,DIRECT);
 
 void setup() {
-  // Setup serial connection for debugging
   Serial.begin(9600);
   // Set up pin modes
   pinMode(flowMeter_pin,INPUT);
@@ -27,8 +26,7 @@ void setup() {
 void loop() {
   // Read flow meter value and convert it  to CFM
   int flowMeterValue=analogRead(flowMeter_pin);
-  flowRate=map(flowMeterValue,0,1023,0,150); //  (0 and 1023):corresponding to the voltage range of 0 to 5V,(0, 150):Min ,Max flowrate.Assumes a linear calibration
- 
+  flowRate=map(flowMeterValue,0,1023,0,150); //  (0 and 1023):corresponding to the voltage range of 0 to 5V,(0, 150):Min ,Max flowrate.Assuming a linear calibration
   // Update PID input value
   input = flowRate;
   
