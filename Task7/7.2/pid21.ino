@@ -23,11 +23,11 @@ void setup() {
 void loop() {
   // Read flow meter value and convert it  to CFM
   int flowMeterValue=analogRead(flowMeter_pin);
-  flowRate=map(flowMeterValue,0,1023,0,150); //  (0 and 1023):corresponding to the voltage range of 0 to 5V,(0, 150):Min ,Max flowrate.Assuming a linear calibration
+  flowRate=map(flowMeterValue,0,1023,0,150); // (0 and 1023):corresponding to the voltage range of 0 to 5V,(0, 150):Min ,Max flowrate.Assuming a linear calibration
   // Update PID input value
   input=flowRate;
   pid.Compute();// Compute PID output
-  double motorspeed = map(output,0,255,0,255);
+  double motorspeed = map(output,0,255,0,255);//(Min,Max) output Range,(Min,Max) speed Range
   // Write the motor output based on the PID output
    analogWrite(Motor_pin,motorspeed);
                  /*if (flowRate== Target_Rate) {  
@@ -38,8 +38,8 @@ void loop() {
                    }*/
   Serial.print("Flow rate:");
   Serial.print(flowRate);
- Serial.print(" PID output:");
- Serial.println(output);
+ Serial.print("PID output:");
+ Serial.print(output);
   Serial.print("motor speed:");
   Serial.println(motorspeed);
   delay(1000); 
