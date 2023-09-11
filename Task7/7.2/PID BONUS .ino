@@ -5,15 +5,15 @@
 class PID_Controller{
   public:
     PID_Controller(double kp,double ki,double kd,double Target_Rate) :
-      kp(kp), ki(ki), kd(kd), Target_Rate(Target_Rate) {
-        error = 0;
+      kp(kp),ki(ki),kd(kd),Target_Rate(Target_Rate) {
+         error = 0;
         integral = 0;
         derivative = 0;
         previnput = 0;
     }  
     double calc(double input) {
-      error = Target_Rate-input;
-      integral += error;
+      error=Target_Rate-input;
+      integral+=error;
       derivative=input-previnput;
       previnput=input;
       double output = kp*error + ki*integral + kd*derivative;
@@ -26,9 +26,9 @@ class PID_Controller{
 };
 
 // Define PID gains and setpoint(Target_Rate)
-double kp =1.5; // Proportional gain
-double ki =1.3; // Integral gain
-double kd =0.5; // Derivative gain
+double kp=1.5; // Proportional gain
+double ki=1.3; // Integral gain
+double kd=0.5; // Derivative gain
 double Target_Rate=90.0; //CFM(setpoint)
 
 // Create a PID controller 
@@ -48,17 +48,16 @@ void loop() {
 
   // Compute motor speed using PID controller
   double pid_out = pid.calc(flowRate);
-
-  // Scale PID output to motor speed range
+// Scale PID output to motor speed range
   double motorspeed = map(pid_out,0,255,0,255);
   // Write the motor output based on the PID output
   analogWrite(Motor_pin,motorspeed);
   
   Serial.print("Flow rate:");
   Serial.print(flowRate);
-  Serial.print(" PID output:");
+  Serial.print("PID output:");
   Serial.println(pid_out);
-  Serial.print(" Motor speed:");
+  Serial.print("motor speed:");
   Serial.print(motorspeed);
   delay(1000);
 }
