@@ -28,6 +28,7 @@ void loop() {
   input=flowRate;
   pid.Compute();// Compute PID output
   double motorspeed = map(output,0,255,0,255);
+  // Write the motor output based on the PID output
    analogWrite(Motor_pin,motorspeed);
                  /*if (flowRate== Target_Rate) {  
                 analogWrite(Motor_pin,motorspeed); // adjust the motor based on PID output
