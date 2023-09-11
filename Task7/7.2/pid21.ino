@@ -10,7 +10,7 @@ double kp =1.5 ;// Proportional gain
 double ki =1.3 ; // Integral gain 
 double kd =0.5 ; // Derivative gain 
 double Target_Rate = 90;//CFM
-double input,output;
+double input,output; 
  // Initialize PID controller
 PID pid(&input,&output,&Target_Rate,kp,ki,kd,DIRECT);
 
