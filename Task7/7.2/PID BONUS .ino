@@ -49,16 +49,16 @@ void loop() {
   // Compute motor speed using PID controller
   double pid_out = pid.calc(flowRate);
 // Scale PID output to motor speed range
-  double motorspeed = map(pid_out,0,255,0,255);
+  double motorspeed = map(pid_out,0,255,0,255);//(Min,Max)output Range,(Min,Max)speed Range.
   // Write the motor output based on the PID output
   analogWrite(Motor_pin,motorspeed);
   
   Serial.print("Flow rate:");
   Serial.print(flowRate);
   Serial.print("PID output:");
-  Serial.println(pid_out);
+  Serial.print(pid_out);
   Serial.print("motor speed:");
-  Serial.print(motorspeed);
+  Serial.println(motorspeed);
   delay(1000);
 }
 
