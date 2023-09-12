@@ -1,6 +1,5 @@
 
-# Driving the Kinematic model for the
-omni wheel configuration
+# Driving the Kinematic model for the omni wheel configuration
 
 ---
 
