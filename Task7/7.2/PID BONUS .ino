@@ -49,12 +49,12 @@ void setup() {
 void loop() {
   // Read flow meter value and convert it to CFM
   int flowMeterValue = analogRead(flowMeter_pin);
-  double flowRate = map(flowMeterValue,0,1023,0,150); // (0, 1023) corresponds to the voltage range of 0 to 5V, (0, 150) represents the flow rate range
+  double flowRate = map(flowMeterValue,0,1023,0,150); //flowRate=flowMeterValue*150/1023. (0, 1023) corresponds to the voltage range of 0 to 5V, (0, 150) represents the flow rate range
 
   // Compute motor speed using PID controller
   double pid_out = pid.calc(flowRate);
 // Scale PID output to motor speed range
-  double motorspeed = map(pid_out,0,255,0,255);//(Min,Max)output Range,(Min,Max)speed Range.
+  double motorspeed = map(pid_out,0,255,0,255);//(Min,Max)output Range,(Min,Max)speed Range.speed=pid_out*255/255.
   // Write the motor output based on the PID output
   analogWrite(Motor_pin,motorspeed);
   
