@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
+  <compound refid="class_p_i_d___controller" kind="class"><name>PID_Controller</name>
+    <member refid="class_p_i_d___controller_1ac950c5db8b62ebf1cfb9449d8f4e7eb1" kind="variable"><name>kp</name></member>
+    <member refid="class_p_i_d___controller_1a2dd4f1bd2e92e8919660f522ba52a7af" kind="variable"><name>ki</name></member>
+    <member refid="class_p_i_d___controller_1ab37906d0a4cbb1165f0c6d193e5669d7" kind="variable"><name>kd</name></member>
+    <member refid="class_p_i_d___controller_1acd4b53587fdeb4de2cf13ddd9f5f9ed6" kind="variable"><name>Target_Rate</name></member>
+    <member refid="class_p_i_d___controller_1ab766aabc41bcccbcca9096511856aa23" kind="variable"><name>error</name></member>
+    <member refid="class_p_i_d___controller_1a6eafb4d86ca2f8589fca6237a0295dbd" kind="variable"><name>integral</name></member>
+    <member refid="class_p_i_d___controller_1ab2f384f3b2fdd61c8dd4db3aad0309f9" kind="variable"><name>derivative</name></member>
+    <member refid="class_p_i_d___controller_1aaaa53087aba6463eab2cceddc7ea6d08" kind="variable"><name>previnput</name></member>
+    <member refid="class_p_i_d___controller_1afc2fa374a78cf7228080c59ef35e98b6" kind="function"><name>PID_Controller</name></member>
+    <member refid="class_p_i_d___controller_1a7afc03891e02844dd7b80281194d6e95" kind="function"><name>calc</name></member>
+  </compound>
+  <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="main_8cpp_1ae96a4da15bbc37b0363bc8da6ae90251" kind="define"><name>Motor_pin</name></member>
+    <member refid="main_8cpp_1af7c1b4c1a4db6d1aff61f7ea5ddfe22c" kind="define"><name>flowMeter_pin</name></member>
+    <member refid="main_8cpp_1ac6390bc2d074992cc6ca37d132a5262d" kind="variable"><name>kp</name></member>
+    <member refid="main_8cpp_1a23e09706a4abb026e1de279c4904e926" kind="variable"><name>ki</name></member>
+    <member refid="main_8cpp_1a1cf17dd45e85748457863776dcb28335" kind="variable"><name>kd</name></member>
+    <member refid="main_8cpp_1a248fc80712bb5f7bcfa6f91a6a290fb1" kind="variable"><name>Target_Rate</name></member>
+    <member refid="main_8cpp_1aad1d00a76401ca8e922b1efa7cd19cb3" kind="variable"><name>pid</name></member>
+    <member refid="main_8cpp_1a4fc01d736fe50cf5b977f755b675f11d" kind="function"><name>setup</name></member>
+    <member refid="main_8cpp_1afe461d27b9c48d5921c00d521181f12f" kind="function"><name>loop</name></member>
+  </compound>
+  <compound refid="dir_d0411a3330e1b0f1a8484884e468d215" kind="dir"><name>input</name>
+  </compound>
+</doxygenindex>

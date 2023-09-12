@@ -1,0 +1,244 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_p_i_d___controller" kind="class" language="C++" prot="public">
+    <compoundname>PID_Controller</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_p_i_d___controller_1ac950c5db8b62ebf1cfb9449d8f4e7eb1" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double PID_Controller::kp</definition>
+        <argsstring></argsstring>
+        <name>kp</name>
+        <qualifiedname>PID_Controller::kp</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Proportional gain </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="input/main.cpp" line="46" column="10" bodyfile="input/main.cpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_i_d___controller_1a2dd4f1bd2e92e8919660f522ba52a7af" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double PID_Controller::ki</definition>
+        <argsstring></argsstring>
+        <name>ki</name>
+        <qualifiedname>PID_Controller::ki</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Integral gain </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="input/main.cpp" line="47" column="10" bodyfile="input/main.cpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_i_d___controller_1ab37906d0a4cbb1165f0c6d193e5669d7" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double PID_Controller::kd</definition>
+        <argsstring></argsstring>
+        <name>kd</name>
+        <qualifiedname>PID_Controller::kd</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Derivative gain </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="input/main.cpp" line="48" column="10" bodyfile="input/main.cpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_i_d___controller_1acd4b53587fdeb4de2cf13ddd9f5f9ed6" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double PID_Controller::Target_Rate</definition>
+        <argsstring></argsstring>
+        <name>Target_Rate</name>
+        <qualifiedname>PID_Controller::Target_Rate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Target flow rate (CFM) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="input/main.cpp" line="49" column="10" bodyfile="input/main.cpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_i_d___controller_1ab766aabc41bcccbcca9096511856aa23" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double PID_Controller::error</definition>
+        <argsstring></argsstring>
+        <name>error</name>
+        <qualifiedname>PID_Controller::error</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Error term </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="input/main.cpp" line="50" column="10" bodyfile="input/main.cpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_i_d___controller_1a6eafb4d86ca2f8589fca6237a0295dbd" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double PID_Controller::integral</definition>
+        <argsstring></argsstring>
+        <name>integral</name>
+        <qualifiedname>PID_Controller::integral</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Integral term </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="input/main.cpp" line="51" column="10" bodyfile="input/main.cpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_i_d___controller_1ab2f384f3b2fdd61c8dd4db3aad0309f9" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double PID_Controller::derivative</definition>
+        <argsstring></argsstring>
+        <name>derivative</name>
+        <qualifiedname>PID_Controller::derivative</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Derivative term </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="input/main.cpp" line="52" column="10" bodyfile="input/main.cpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_p_i_d___controller_1aaaa53087aba6463eab2cceddc7ea6d08" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double PID_Controller::previnput</definition>
+        <argsstring></argsstring>
+        <name>previnput</name>
+        <qualifiedname>PID_Controller::previnput</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Previous input value </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="input/main.cpp" line="53" column="10" bodyfile="input/main.cpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_p_i_d___controller_1afc2fa374a78cf7228080c59ef35e98b6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>PID_Controller::PID_Controller</definition>
+        <argsstring>(double kp, double ki, double kd, double Target_Rate)</argsstring>
+        <name>PID_Controller</name>
+        <qualifiedname>PID_Controller::PID_Controller</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>kp</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>ki</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>kd</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>Target_Rate</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>kp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Proportional gain </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ki</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Integral gain </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>kd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Derivative gain </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Target_Rate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Target flow rate (CFM) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="input/main.cpp" line="23" column="3" bodyfile="input/main.cpp" bodystart="23" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_p_i_d___controller_1a7afc03891e02844dd7b80281194d6e95" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double PID_Controller::calc</definition>
+        <argsstring>(double input)</argsstring>
+        <name>calc</name>
+        <qualifiedname>PID_Controller::calc</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+<para>Calculate the PID output. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current flow rate </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>PID output </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="input/main.cpp" line="36" column="10" bodyfile="input/main.cpp" bodystart="36" bodyend="43"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>PID Controller class for flow meter control. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="input/main.cpp" line="14" column="1" bodyfile="input/main.cpp" bodystart="14" bodyend="54"/>
+    <listofallmembers>
+      <member refid="class_p_i_d___controller_1a7afc03891e02844dd7b80281194d6e95" prot="public" virt="non-virtual"><scope>PID_Controller</scope><name>calc</name></member>
+      <member refid="class_p_i_d___controller_1ab2f384f3b2fdd61c8dd4db3aad0309f9" prot="private" virt="non-virtual"><scope>PID_Controller</scope><name>derivative</name></member>
+      <member refid="class_p_i_d___controller_1ab766aabc41bcccbcca9096511856aa23" prot="private" virt="non-virtual"><scope>PID_Controller</scope><name>error</name></member>
+      <member refid="class_p_i_d___controller_1a6eafb4d86ca2f8589fca6237a0295dbd" prot="private" virt="non-virtual"><scope>PID_Controller</scope><name>integral</name></member>
+      <member refid="class_p_i_d___controller_1ab37906d0a4cbb1165f0c6d193e5669d7" prot="private" virt="non-virtual"><scope>PID_Controller</scope><name>kd</name></member>
+      <member refid="class_p_i_d___controller_1a2dd4f1bd2e92e8919660f522ba52a7af" prot="private" virt="non-virtual"><scope>PID_Controller</scope><name>ki</name></member>
+      <member refid="class_p_i_d___controller_1ac950c5db8b62ebf1cfb9449d8f4e7eb1" prot="private" virt="non-virtual"><scope>PID_Controller</scope><name>kp</name></member>
+      <member refid="class_p_i_d___controller_1afc2fa374a78cf7228080c59ef35e98b6" prot="public" virt="non-virtual"><scope>PID_Controller</scope><name>PID_Controller</name></member>
+      <member refid="class_p_i_d___controller_1aaaa53087aba6463eab2cceddc7ea6d08" prot="private" virt="non-virtual"><scope>PID_Controller</scope><name>previnput</name></member>
+      <member refid="class_p_i_d___controller_1acd4b53587fdeb4de2cf13ddd9f5f9ed6" prot="private" virt="non-virtual"><scope>PID_Controller</scope><name>Target_Rate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

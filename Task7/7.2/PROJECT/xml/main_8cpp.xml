@@ -1,0 +1,217 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="main_8cpp" kind="file" language="C++">
+    <compoundname>main.cpp</compoundname>
+    <innerclass refid="class_p_i_d___controller" prot="public">PID_Controller</innerclass>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="main_8cpp_1ae96a4da15bbc37b0363bc8da6ae90251" prot="public" static="no">
+        <name>Motor_pin</name>
+        <initializer>6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Motor control pin </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="input/main.cpp" line="7" column="9" bodyfile="input/main.cpp" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="main_8cpp_1af7c1b4c1a4db6d1aff61f7ea5ddfe22c" prot="public" static="no">
+        <name>flowMeter_pin</name>
+        <initializer>A1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Flow meter pin </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="input/main.cpp" line="8" column="9" bodyfile="input/main.cpp" bodystart="8" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="main_8cpp_1ac6390bc2d074992cc6ca37d132a5262d" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double kp</definition>
+        <argsstring></argsstring>
+        <name>kp</name>
+        <initializer>= 1.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Proportional gain </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="input/main.cpp" line="57" column="8" bodyfile="input/main.cpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1a23e09706a4abb026e1de279c4904e926" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ki</definition>
+        <argsstring></argsstring>
+        <name>ki</name>
+        <initializer>= 1.3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Integral gain </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="input/main.cpp" line="58" column="8" bodyfile="input/main.cpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1a1cf17dd45e85748457863776dcb28335" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double kd</definition>
+        <argsstring></argsstring>
+        <name>kd</name>
+        <initializer>= 0.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Derivative gain </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="input/main.cpp" line="59" column="8" bodyfile="input/main.cpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1a248fc80712bb5f7bcfa6f91a6a290fb1" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Target_Rate</definition>
+        <argsstring></argsstring>
+        <name>Target_Rate</name>
+        <initializer>= 90.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Target flow rate (CFM) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="input/main.cpp" line="60" column="8" bodyfile="input/main.cpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="main_8cpp_1aad1d00a76401ca8e922b1efa7cd19cb3" prot="public" static="no" mutable="no">
+        <type><ref refid="class_p_i_d___controller" kindref="compound">PID_Controller</ref></type>
+        <definition>PID_Controller pid(kp, ki, kd, Target_Rate)</definition>
+        <argsstring>(kp, ki, kd, Target_Rate)</argsstring>
+        <name>pid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="input/main.cpp" line="63" column="16"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="main_8cpp_1a4fc01d736fe50cf5b977f755b675f11d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void setup</definition>
+        <argsstring>()</argsstring>
+        <name>setup</name>
+        <briefdescription>
+<para>Setup function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="input/main.cpp" line="68" column="6" bodyfile="input/main.cpp" bodystart="68" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="main_8cpp_1afe461d27b9c48d5921c00d521181f12f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void loop</definition>
+        <argsstring>()</argsstring>
+        <name>loop</name>
+        <briefdescription>
+<para>Loop function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="input/main.cpp" line="78" column="6" bodyfile="input/main.cpp" bodystart="78" bodyend="99"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Flow Meter Control using PID. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Define<sp/>motor<sp/>control<sp/>and<sp/>flow<sp/>meter<sp/>pin</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>Motor_pin<sp/>6<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>flowMeter_pin<sp/>A1<sp/></highlight></codeline>
+<codeline lineno="14" refid="class_p_i_d___controller" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_p_i_d___controller" kindref="compound">PID_Controller</ref><sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><ref refid="class_p_i_d___controller" kindref="compound">PID_Controller</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>kp,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ki,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>kd,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>Target_Rate)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="main_8cpp_1ac6390bc2d074992cc6ca37d132a5262d" kindref="member">kp</ref>(<ref refid="main_8cpp_1ac6390bc2d074992cc6ca37d132a5262d" kindref="member">kp</ref>),<sp/><ref refid="main_8cpp_1a23e09706a4abb026e1de279c4904e926" kindref="member">ki</ref>(<ref refid="main_8cpp_1a23e09706a4abb026e1de279c4904e926" kindref="member">ki</ref>),<sp/><ref refid="main_8cpp_1a1cf17dd45e85748457863776dcb28335" kindref="member">kd</ref>(<ref refid="main_8cpp_1a1cf17dd45e85748457863776dcb28335" kindref="member">kd</ref>),<sp/><ref refid="main_8cpp_1a248fc80712bb5f7bcfa6f91a6a290fb1" kindref="member">Target_Rate</ref>(<ref refid="main_8cpp_1a248fc80712bb5f7bcfa6f91a6a290fb1" kindref="member">Target_Rate</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>error<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>integral<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>derivative<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>previnput<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_p_i_d___controller_1a7afc03891e02844dd7b80281194d6e95" kindref="member">calc</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>input)<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>error<sp/>=<sp/><ref refid="main_8cpp_1a248fc80712bb5f7bcfa6f91a6a290fb1" kindref="member">Target_Rate</ref><sp/>-<sp/>input;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>integral<sp/>+=<sp/>error;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>derivative<sp/>=<sp/>input<sp/>-<sp/>previnput;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>previnput<sp/>=<sp/>input;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>output<sp/>=<sp/><ref refid="main_8cpp_1ac6390bc2d074992cc6ca37d132a5262d" kindref="member">kp</ref><sp/>*<sp/>error<sp/>+<sp/><ref refid="main_8cpp_1a23e09706a4abb026e1de279c4904e926" kindref="member">ki</ref><sp/>*<sp/>integral<sp/>+<sp/><ref refid="main_8cpp_1a1cf17dd45e85748457863776dcb28335" kindref="member">kd</ref><sp/>*<sp/>derivative;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>output;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1ac6390bc2d074992cc6ca37d132a5262d" kindref="member">kp</ref>;<sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a23e09706a4abb026e1de279c4904e926" kindref="member">ki</ref>;<sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a1cf17dd45e85748457863776dcb28335" kindref="member">kd</ref>;<sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a248fc80712bb5f7bcfa6f91a6a290fb1" kindref="member">Target_Rate</ref>;<sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>error;<sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>integral;<sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>derivative;<sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>previnput;<sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Define<sp/>PID<sp/>gains<sp/>and<sp/>setpoint<sp/>(Target_Rate)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1ac6390bc2d074992cc6ca37d132a5262d" kindref="member">kp</ref><sp/>=<sp/>1.5;<sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a23e09706a4abb026e1de279c4904e926" kindref="member">ki</ref><sp/>=<sp/>1.3;<sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a1cf17dd45e85748457863776dcb28335" kindref="member">kd</ref><sp/>=<sp/>0.5;<sp/></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a248fc80712bb5f7bcfa6f91a6a290fb1" kindref="member">Target_Rate</ref><sp/>=<sp/>90.0;<sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Create<sp/>a<sp/>PID<sp/>controller</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><ref refid="class_p_i_d___controller" kindref="compound">PID_Controller</ref><sp/>pid(<ref refid="main_8cpp_1ac6390bc2d074992cc6ca37d132a5262d" kindref="member">kp</ref>,<sp/><ref refid="main_8cpp_1a23e09706a4abb026e1de279c4904e926" kindref="member">ki</ref>,<sp/><ref refid="main_8cpp_1a1cf17dd45e85748457863776dcb28335" kindref="member">kd</ref>,<sp/><ref refid="main_8cpp_1a248fc80712bb5f7bcfa6f91a6a290fb1" kindref="member">Target_Rate</ref>);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1a4fc01d736fe50cf5b977f755b675f11d" kindref="member">setup</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>Serial.begin(9600);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>up<sp/>pin<sp/>modes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/>pinMode(<ref refid="main_8cpp_1af7c1b4c1a4db6d1aff61f7ea5ddfe22c" kindref="member">flowMeter_pin</ref>,<sp/>INPUT);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>pinMode(<ref refid="main_8cpp_1ae96a4da15bbc37b0363bc8da6ae90251" kindref="member">Motor_pin</ref>,<sp/>OUTPUT);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="main_8cpp_1afe461d27b9c48d5921c00d521181f12f" kindref="member">loop</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Read<sp/>flow<sp/>meter<sp/>value<sp/>and<sp/>convert<sp/>it<sp/>to<sp/>CFM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>flowMeterValue<sp/>=<sp/>analogRead(<ref refid="main_8cpp_1af7c1b4c1a4db6d1aff61f7ea5ddfe22c" kindref="member">flowMeter_pin</ref>);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>flowRate<sp/>=<sp/>map(flowMeterValue,<sp/>0,<sp/>1023,<sp/>0,<sp/>150);<sp/></highlight><highlight class="comment">//<sp/>(0,<sp/>1023)<sp/>corresponds<sp/>to<sp/>the<sp/>voltage<sp/>range<sp/>of<sp/>0<sp/>to<sp/>5V,<sp/>(0,<sp/>150)<sp/>represents<sp/>the<sp/>flow<sp/>rate<sp/>range</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Compute<sp/>motor<sp/>speed<sp/>using<sp/>PID<sp/>controller</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>pid_out<sp/>=<sp/>pid.<ref refid="class_p_i_d___controller_1a7afc03891e02844dd7b80281194d6e95" kindref="member">calc</ref>(flowRate);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Scale<sp/>PID<sp/>output<sp/>to<sp/>motor<sp/>speed<sp/>range</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>motorspeed<sp/>=<sp/>map(pid_out,<sp/>0,<sp/>255,<sp/>0,<sp/>255);<sp/></highlight><highlight class="comment">//(Min,Max)<sp/>output<sp/>Range,<sp/>(Min,Max)<sp/>speed<sp/>Range.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Write<sp/>the<sp/>motor<sp/>output<sp/>based<sp/>on<sp/>the<sp/>PID<sp/>output</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/>analogWrite(<ref refid="main_8cpp_1ae96a4da15bbc37b0363bc8da6ae90251" kindref="member">Motor_pin</ref>,<sp/>motorspeed);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/>Serial.print(</highlight><highlight class="stringliteral">&quot;Flow<sp/>rate:<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/>Serial.print(flowRate);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/>Serial.print(</highlight><highlight class="stringliteral">&quot;<sp/>PID<sp/>output:<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/>Serial.print(pid_out);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/>Serial.print(</highlight><highlight class="stringliteral">&quot;<sp/>Motor<sp/>speed:<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/>Serial.println(motorspeed);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/>delay(1000);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="input/main.cpp"/>
+  </compounddef>
+</doxygen>

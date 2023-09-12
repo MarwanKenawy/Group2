@@ -1,0 +1,90 @@
+\doxysection{input/main.cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{input/main.cpp@{input/main.cpp}}
+
+
+Flow Meter Control using PID.  
+
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_p_i_d___controller}{PID\+\_\+\+Controller}}
+\begin{DoxyCompactList}\small\item\em PID Controller class for flow meter control. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{main_8cpp_ae96a4da15bbc37b0363bc8da6ae90251}{Motor\+\_\+pin}}~6
+\item 
+\#define \mbox{\hyperlink{main_8cpp_af7c1b4c1a4db6d1aff61f7ea5ddfe22c}{flow\+Meter\+\_\+pin}}~A1
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{main_8cpp_a4fc01d736fe50cf5b977f755b675f11d}\label{main_8cpp_a4fc01d736fe50cf5b977f755b675f11d} 
+void {\bfseries setup} ()
+\begin{DoxyCompactList}\small\item\em Setup function. \end{DoxyCompactList}\item 
+\Hypertarget{main_8cpp_afe461d27b9c48d5921c00d521181f12f}\label{main_8cpp_afe461d27b9c48d5921c00d521181f12f} 
+void {\bfseries loop} ()
+\begin{DoxyCompactList}\small\item\em Loop function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{main_8cpp_ac6390bc2d074992cc6ca37d132a5262d}{kp}} = 1.\+5
+\item 
+double \mbox{\hyperlink{main_8cpp_a23e09706a4abb026e1de279c4904e926}{ki}} = 1.\+3
+\item 
+double \mbox{\hyperlink{main_8cpp_a1cf17dd45e85748457863776dcb28335}{kd}} = 0.\+5
+\item 
+double \mbox{\hyperlink{main_8cpp_a248fc80712bb5f7bcfa6f91a6a290fb1}{Target\+\_\+\+Rate}} = 90.\+0
+\item 
+\Hypertarget{main_8cpp_aad1d00a76401ca8e922b1efa7cd19cb3}\label{main_8cpp_aad1d00a76401ca8e922b1efa7cd19cb3} 
+\mbox{\hyperlink{class_p_i_d___controller}{PID\+\_\+\+Controller}} {\bfseries pid} (\mbox{\hyperlink{main_8cpp_ac6390bc2d074992cc6ca37d132a5262d}{kp}}, \mbox{\hyperlink{main_8cpp_a23e09706a4abb026e1de279c4904e926}{ki}}, \mbox{\hyperlink{main_8cpp_a1cf17dd45e85748457863776dcb28335}{kd}}, \mbox{\hyperlink{main_8cpp_a248fc80712bb5f7bcfa6f91a6a290fb1}{Target\+\_\+\+Rate}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Flow Meter Control using PID. 
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{main_8cpp_af7c1b4c1a4db6d1aff61f7ea5ddfe22c}\label{main_8cpp_af7c1b4c1a4db6d1aff61f7ea5ddfe22c} 
+\index{main.cpp@{main.cpp}!flowMeter\_pin@{flowMeter\_pin}}
+\index{flowMeter\_pin@{flowMeter\_pin}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{flowMeter\_pin}{flowMeter\_pin}}
+{\footnotesize\ttfamily \#define flow\+Meter\+\_\+pin~A1}
+
+Flow meter pin \Hypertarget{main_8cpp_ae96a4da15bbc37b0363bc8da6ae90251}\label{main_8cpp_ae96a4da15bbc37b0363bc8da6ae90251} 
+\index{main.cpp@{main.cpp}!Motor\_pin@{Motor\_pin}}
+\index{Motor\_pin@{Motor\_pin}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{Motor\_pin}{Motor\_pin}}
+{\footnotesize\ttfamily \#define Motor\+\_\+pin~6}
+
+Motor control pin 
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{main_8cpp_a1cf17dd45e85748457863776dcb28335}\label{main_8cpp_a1cf17dd45e85748457863776dcb28335} 
+\index{main.cpp@{main.cpp}!kd@{kd}}
+\index{kd@{kd}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{kd}{kd}}
+{\footnotesize\ttfamily double kd = 0.\+5}
+
+Derivative gain \Hypertarget{main_8cpp_a23e09706a4abb026e1de279c4904e926}\label{main_8cpp_a23e09706a4abb026e1de279c4904e926} 
+\index{main.cpp@{main.cpp}!ki@{ki}}
+\index{ki@{ki}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{ki}{ki}}
+{\footnotesize\ttfamily double ki = 1.\+3}
+
+Integral gain \Hypertarget{main_8cpp_ac6390bc2d074992cc6ca37d132a5262d}\label{main_8cpp_ac6390bc2d074992cc6ca37d132a5262d} 
+\index{main.cpp@{main.cpp}!kp@{kp}}
+\index{kp@{kp}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{kp}{kp}}
+{\footnotesize\ttfamily double kp = 1.\+5}
+
+Proportional gain \Hypertarget{main_8cpp_a248fc80712bb5f7bcfa6f91a6a290fb1}\label{main_8cpp_a248fc80712bb5f7bcfa6f91a6a290fb1} 
+\index{main.cpp@{main.cpp}!Target\_Rate@{Target\_Rate}}
+\index{Target\_Rate@{Target\_Rate}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{Target\_Rate}{Target\_Rate}}
+{\footnotesize\ttfamily double Target\+\_\+\+Rate = 90.\+0}
+
+Target flow rate (CFM) 
