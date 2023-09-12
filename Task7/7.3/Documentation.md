@@ -84,7 +84,7 @@ $$
     \end{bmatrix} 
    
   
-    \begin{bmatrix} V_{1} \\ V_{2} \\ V_3 \end{bmatrix}
+    \begin{bmatrix} V_{1}\\V_{2}\\V_3 \end{bmatrix}
 
 $$
 ```
