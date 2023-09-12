@@ -1,3 +1,4 @@
+```
 # Driving the Kinematic model for the
 omni wheel configuration
 
@@ -98,6 +99,7 @@ V_{xg} = V_{xl} \cos \theta -V_{yl}\sin \theta
 $$
 
 $$
+```
 V_{yg} = V_{xl} \sin \theta +V_{yl}\cos \theta
 $$
 
