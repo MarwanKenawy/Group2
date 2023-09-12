@@ -8,7 +8,7 @@ title: Classes
 
 
 
-* **class [PID_Controller](output/Classes/class_p_i_d___controller.md)** <br>PID Controller class for flow meter control. 
+* **class [PID_Controller](New folder/output/Classes/class_p_i_d___controller.md)** <br>PID Controller class for flow meter control. 
 
 
 
