@@ -76,15 +76,13 @@ $$
 
  \begin{bmatrix} V_{X} \\ V_{Y} \\ V_\theta \end{bmatrix}
 
-$$
  =
-$$
   \begin{bmatrix}
   -\cos \alpha &  -\cos \alpha & 1 \\ \sin \alpha &  -\sin \alpha & 0 \\
    \frac{1}{R} &  \frac{1}{R} & \frac{1}{R} \\
     \end{bmatrix} 
-    $$ 
-    &&
+   
+  
     \begin{bmatrix} V_{1} \\ V_{2} \\ V_3 \end{bmatrix}
 
 $$
