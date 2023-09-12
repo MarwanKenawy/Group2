@@ -1,5 +1,5 @@
-# Driving the Kinematic model for the
-omni wheel configuration
+
+# Driving the Kinematic model for the omni wheel configuration
 
 ---
 
@@ -70,19 +70,20 @@ $V_{i(1,2,3)} = \omega .r$  where   $r$ = radius of wheel
 Let’s assume that $\phi$ = 30 $\degree$ So $\alpha$ = 60 $\degree$ .So, $\sin \alpha = \frac{\sqrt3}{2}$ and $\cos \alpha = \frac{1}{2}$.
 
 Therefore the matrix should be : 
+```math
+ \begin{bmatrix}
+ V_{X}\\V_{Y}\\V_\theta
+ \end{bmatrix}
 
-$$
-
- \begin{bmatrix} V_{X} \\ V_{Y} \\ V_\theta \end{bmatrix}
  =
- 
   \begin{bmatrix}
-  -\cos \alpha &  -\cos \alpha & 1 \\ \sin \alpha &  -\sin \alpha & 0 \\
-   \frac{1}{R} &  \frac{1}{R} & \frac{1}{R} \\
-    \end{bmatrix}      \begin{bmatrix} V_{1} \\ V_{2} \\ V_3 \end{bmatrix}
+  -\cos \alpha &  -\cos \alpha & 1\\\sin \alpha &  -\sin \alpha & 0\\\frac{1}{R} &  \frac{1}{R} & \frac{1}{R}
+    \end{bmatrix} 
+   
 
-$$
+    \begin{bmatrix} V_{1}\\V_{2}\\V_3 \end{bmatrix}
 
+```
 and then we substitute with previous givens.
 
 # Global kinematics equations :
@@ -104,3 +105,4 @@ $$
 $$
 \omega = \omega
 $$
+
