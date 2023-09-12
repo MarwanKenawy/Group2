@@ -21,6 +21,9 @@ void setup() {
   pid.SetSampleTime(1000); //milliseconds  
 }
 void loop() {
+ double now=millis();
+ double preTime;
+ prevTime=now;
   // Read flow meter value and convert it  to CFM
   int flowMeterValue=analogRead(flowMeter_pin);
   flowRate=map(flowMeterValue,0,1023,0,150); // (0 and 1023):corresponding to the voltage range of 0 to 5V,(0, 150):Min ,Max flowrate.Assuming a linear calibration
