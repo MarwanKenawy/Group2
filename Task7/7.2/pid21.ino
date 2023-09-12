@@ -3,9 +3,6 @@
 #define Motor_pin 6
 #define flowMeter_pin A1//analog pin
 double flowRate = 0;
-double now=millis();
-double prevTime=0;
-
 // Define PID parametersdouble now=millis();
 double kp =1.5 ;// Proportional gain
 double ki =1.3 ; // Integral gain 
