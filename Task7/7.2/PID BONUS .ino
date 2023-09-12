@@ -9,6 +9,7 @@ class PID_Controller{
          error = 0;
         integral = 0;
         derivative = 0;
+        prevTime=0;
         previnput = 0;
     }  
     double calc(double input) {
