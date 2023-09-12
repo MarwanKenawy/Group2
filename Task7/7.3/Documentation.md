@@ -73,7 +73,7 @@ Let’s assume that $\phi$ = 30 $\degree$ So $\alpha$ = 60 $\degree$ .So, $\sin 
 Therefore the matrix should be : 
 
 $$
-```
+```math
  \begin{bmatrix}
  V_{X}\\V_{Y}\\V_\theta
  \end{bmatrix}
