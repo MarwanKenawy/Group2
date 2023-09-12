@@ -17,8 +17,8 @@ class PID_Controller{
       prevTime = now;
 
       error=Target_Rate-input;
-      integral+=error;
-      derivative=input-previnput;
+      integral+=error * dt;
+      derivative=(input-previnput) * dt;
       previnput=input;
       double output = kp*error + ki*integral + kd*derivative;
       return output;
