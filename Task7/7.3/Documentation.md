@@ -73,7 +73,7 @@ Let’s assume that $\phi$ = 30 $\degree$ So $\alpha$ = 60 $\degree$ .So, $\sin 
 Therefore the matrix should be : 
 
 $$
-
+```math
  \begin{bmatrix} V_{X} \\ V_{Y} \\ V_\theta \end{bmatrix}
 
  =
@@ -86,7 +86,7 @@ $$
     \begin{bmatrix} V_{1} \\ V_{2} \\ V_3 \end{bmatrix}
 
 $$
-
+```
 and then we substitute with previous givens.
 
 # Global kinematics equations :
