@@ -50,16 +50,19 @@ def simulate_robot_movement(Vx, Vy, omega, target_position=None):
     y = 0
     theta = 0
 
-    Kp = 0.5
+    Kp = 0.2
     Ki = 0.1
-    Kd = 0.2
+    Kd = 0.7
 
-    integral = 0
-    previous_error = 0
+    integralx = 0
+    previous_errorx = 0
+
+    integraly = 0
+    previous_errory = 0
 
     time = []
-    x_data = []
-    y_data = []
+    x_data = [0]
+    y_data = [0]
     theta_data = []  # Store the robot's orientation
 
     for step in range(num_steps):
@@ -67,19 +70,25 @@ def simulate_robot_movement(Vx, Vy, omega, target_position=None):
         pwm1, pwm2, pwm3 = drive_motors(v1, v2, v3)
 
         if target_position is not None:
-            error = math.sqrt((target_position[0] - x)**2 + (target_position[1] - y)**2)
-            integral += error * dt
-            derivative = (error - previous_error) / dt
-            pid_output = Kp * error + Ki * integral + Kd * derivative
+            # error = math.sqrt((target_position[0] - x)**2 + (target_position[1] - y)**2)
+            errorx = target_position[0] - x
+            integralx += errorx * dt
+            derivativex = (errorx - previous_errorx) / dt
+            pid_outputx = Kp * errorx + Ki * integralx + Kd * derivativex
 
-            pwm1 += pid_output
-            pwm2 += pid_output
-            pwm3 += pid_output
+            errory = target_position[1] - y
+            integraly += errory * dt
+            derivativey = (errory - previous_errory) / dt
+            pid_outputy = Kp * errory + Ki * integraly + Kd*derivativey
 
-            previous_error = error
+            Vx += pid_outputx
+            Vy += pid_outputy
 
-        x += (pwm1 + pwm2 + pwm3) * math.cos(math.radians(theta)) * dt
-        y += (pwm1 + pwm2 + pwm3) * math.sin(math.radians(theta)) * dt
+            previous_errorx = errorx
+            previous_errory = errory
+
+        x += (Vx) * dt
+        y += (Vy) * dt
         theta += omega * dt
 
         time.append(step * dt)
@@ -105,11 +114,11 @@ def simulate_robot_movement(Vx, Vy, omega, target_position=None):
 # Create an animation
 def animate_robot_movement():
     #Example of values to make a simulation
-    Vx = 5  
+    Vx =  5
     Vy = 0
-    omega = 45  
+    omega = 0
 
-    target_position = [100, 100]  # Example target position
+    target_position = [100,100]  # Example target position
 
     time, x_data, y_data, X_global, Y_global, theta_data = simulate_robot_movement(Vx, Vy, omega, target_position)
 
