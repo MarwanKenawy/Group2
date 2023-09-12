@@ -3,7 +3,10 @@
 #define Motor_pin 6
 #define flowMeter_pin A1//analog pin
 double flowRate = 0;
-// Define PID parameters
+double now=millis();
+double prevTime=0;
+
+// Define PID parametersdouble now=millis();
 double kp =1.5 ;// Proportional gain
 double ki =1.3 ; // Integral gain 
 double kd =0.5 ; // Derivative gain 
@@ -21,9 +24,6 @@ void setup() {
   pid.SetSampleTime(1000); //milliseconds  
 }
 void loop() {
- double now=millis();
- double preTime;
- prevTime=now;
   // Read flow meter value and convert it  to CFM
   int flowMeterValue=analogRead(flowMeter_pin);
   flowRate=map(flowMeterValue,0,1023,0,150); // (0 and 1023):corresponding to the voltage range of 0 to 5V,(0, 150):Min ,Max flowrate.Assuming a linear calibration
