@@ -71,8 +71,6 @@ $V_{i(1,2,3)} = \omega .r$  where   $r$ = radius of wheel
 Let’s assume that $\phi$ = 30 $\degree$ So $\alpha$ = 60 $\degree$ .So, $\sin \alpha = \frac{\sqrt3}{2}$ and $\cos \alpha = \frac{1}{2}$.
 
 Therefore the matrix should be : 
-
-$$
 ```math
  \begin{bmatrix}
  V_{X}\\V_{Y}\\V_\theta
@@ -86,7 +84,6 @@ $$
   
     \begin{bmatrix} V_{1}\\V_{2}\\V_3 \end{bmatrix}
 
-$$
 ```
 and then we substitute with previous givens.
 
