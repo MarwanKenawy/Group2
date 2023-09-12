@@ -1,63 +1,87 @@
+import math
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
-import time
 
-L = 0.2  # Distance between the two wheels (wheelbase)
-R = 0.2  # Radius of the wheels
+# given
+R = 20 
+THETA1 = 0
+THETA2 = 120
+THETA3 = 240
 
-# Function to calculate wheel angular velocities
-def calculate_wheel_angular_velocities(Vx, Vy, Omega):
-    V1 = Vx + (L / 2) * Omega
-    V2 = -0.5 * Vx + (L * np.sqrt(3) / 2) * Vy + (L / 2) * Omega
-    V3 = -0.5 * Vx - (L * np.sqrt(3) / 2) * Vy + (L / 2) * Omega
+#
+# function to calculate the angular velocity on each motor
+#
+def calculate_motor_velocities(Vx, Vy, omega):
+    vx1 = Vx - R * math.sin(math.radians(THETA1))
+    vy1 = Vy - R * math.cos(math.radians(THETA1))
+    v1 = math.sqrt(vx1**2 + vy1**2) + R * math.radians(omega)
 
-    Omega1 = V1 / R
-    Omega2 = V2 / R
-    Omega3 = V3 / R
+    vx2 = Vx - R * math.sin(math.radians(THETA2))
+    vy2 = Vy - R * math.cos(math.radians(THETA2))
+    v2 = math.sqrt(vx2**2 + vy2**2) + R * math.radians(omega)
 
-    return Omega1, Omega2, Omega3
+    vx3 = Vx - R * math.sin(math.radians(THETA3))
+    vy3 = Vy - R * math.cos(math.radians(THETA3))
+    v3 = math.sqrt(vx3**2 + vy3**2) + R * math.radians(omega)
+    return v1, v2, v3
 
-# drive each motor using cytron driver (PWM = RPM)
-def drive_motors(Omega1, Omega2, Omega3):
-def positional_pid_control(current_position, target_position, dt):
-#Implements positional PID control to drive the robot to the target position
 
-    Kp = 1.0  # Proportional gain
-    Ki = 0.1  # Integral gain
-    Kd = 0.5  # Derivative gain
 
-    integral_error = np.array([0.0, 0.0])  # Initialize integral error
-    previous_error = np.array([0.0, 0.0])  # Initialize previous error
+#
+# positional PID Control
+#
+def simulate_robot_movement(Vx, Vy, omega, target_position=None):
+    dt = 0.1 
+    total_time = 10
+    num_steps = int(total_time / dt)
 
-    while True:
-        # Calculate error
-        error = target_position - current_position
+    # Initials
+    x = 0
+    y = 0 
+    theta = 0 
 
-        # Update integral error
-        integral_error += error * dt
+    # PID
+    Kp = 0.5
+    Ki = 0.1
+    Kd = 0.2
 
-        # Calculate PID control output
-        control_output = Kp * error + Ki * integral_error + Kd * (error - previous_error) / dt
+    # PID variables
+    integral = 0
+    previous_error = 0 #error is initially set to 0
 
-        # Calculate wheel velocities
-        Vx = control_output[0]
-        Vy = control_output[1]
-        Omega = 0.0  # Assume no angular velocity for simplicity
+    time = []
+    x_data = []
+    y_data = []
 
-        Omega1, Omega2, Omega3 = calculate_wheel_angular_velocities(Vx, Vy, Omega)
+    for step in range(num_steps):
+        # Calculate motor velocity
+        v1, v2, v3 = calculate_motor_velocities(Vx, Vy, omega)
 
-        # Drive the motors
-        drive_motors(Omega1, Omega2, Omega3)
+        # Perform PID control
+        if target_position is not None:
+            error = math.sqrt((target_position[0] - x)**2 + (target_position[1] - y)**2)
+            integral += error * dt
+            derivative = (error - previous_error) / dt
 
-        # Update previous error
-        previous_error = error
+            # PID control output
+            pid_output = Kp * error + Ki * integral + Kd * derivative
 
-        # Update current position
-        current_position += np.array([Vx, Vy]) * dt
+            # Update velocities based on PID control output
+            v1 += pid_output
+            v2 += pid_output
+            v3 += pid_output
 
-        # Check if target position reached
-        if np.linalg.norm(error) < 0.01:
-            break
+            previous_error = error
 
-positional_pid_control(current_position, target_position, dt)
+        # Update robot state
+        x += (v1 + v2 + v3) * math.cos(math.radians(theta)) * dt
+        y += (v1 + v2 + v3) * math.sin(math.radians(theta)) * dt
+        theta += omega * dt
+
+        # Store data
+        time.append(step * dt)
+        x_data.append(x)
+        y_data.append(y)
+
+    return time, x_data, y_data
