@@ -12,6 +12,10 @@ class PID_Controller{
         previnput = 0;
     }  
     double calc(double input) {
+      double now = millis();
+      double dt = now - prevTime;
+      prevTime = now;
+
       error=Target_Rate-input;
       integral+=error;
       derivative=input-previnput;
@@ -22,7 +26,7 @@ class PID_Controller{
   private:
     double kp,ki,kd;
     double Target_Rate;
-    double error,integral,derivative,previnput;
+    double error,integral,derivative,previnput,prevTime;
 };
 
 // Define PID gains and setpoint(Target_Rate)
