@@ -39,7 +39,7 @@ depth= (focal_length * baseline)/(disparity+0.0001)#0.0001 to avoid dividing by 
 # Normalize and display depth map
 min_depth= depth.min()
 max_depth= depth.max()
-depth_norm= np.uint8((depth-min_depth)/(max_depth-min_depth)*255) #255 for white 
+depth_norm= np.uint8((depth-min_depth)/(max_depth-min_depth)*255)
 
 cv2.imshow('Depth Map',depth_norm)
 cv2.imshow('Left',imgL)
