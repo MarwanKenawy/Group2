@@ -2,8 +2,8 @@ import cv2
 import numpy as np
 
 # Load left and right images
-imgL = cv2.imread("/Users/LapStore/Downloads/left_image.jpg")
-imgR = cv2.imread("/Users/LapStore/Downloads/right_image.jpg")
+imgL = cv2.imread("Downloads/left_image.jpg")
+imgR = cv2.imread("Downloads/right_image.jpg")
 
 # Denoise left and right images with adjusted parameters
 #fastNlMeansDenoisingColored is fn to remove noise ,its parameters(input image,destination image,h,hForColorComponents,templateWindowSize,searchWindowSize)
