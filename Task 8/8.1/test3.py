@@ -9,13 +9,13 @@ output_folder = './The_output_circles'
 # Check if the folder is found(if not found, create a new one)
 os.makedirs(output_folder, exist_ok=True)
 
-lower_red1 = np.array([0, 100, 100])
-upper_red1 = np.array([10, 255, 255])
-lower_red2 = np.array([160, 100, 100])
-upper_red2 = np.array([180, 255, 255])
+lower_red1 = np.array([0, 100, 150], dtype=np.uint8)
+upper_red1 = np.array([10, 255, 255], dtype=np.uint8)
+lower_red2 = np.array([160, 100, 100], dtype=np.uint8)
+upper_red2 = np.array([180, 255, 255], dtype=np.uint8)
 
-lower_blue = np.array([110, 50, 50])
-upper_blue = np.array([130, 255, 255])
+lower_blue = np.array([110, 50, 50], dtype=np.uint8)
+upper_blue = np.array([130, 255, 255], dtype=np.uint8)
 
 images = os.listdir(dataset_folder)
 
@@ -51,7 +51,7 @@ for image_name in images:
             circularity = cv2.contourArea(contour) / (np.pi * radius * radius)
             
             # Set a circularity threshold to filter out non-circular objects
-            circularity_threshold = 0.6 
+            circularity_threshold = 0.55 
             
             if circularity >= circularity_threshold:
                 cv2.circle(img, center, radius, (0, 0, 255), 2)
