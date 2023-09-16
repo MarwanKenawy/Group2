@@ -14,8 +14,11 @@ upper_red1 = np.array([10, 255, 255], dtype=np.uint8)
 lower_red2 = np.array([160, 100, 100], dtype=np.uint8)
 upper_red2 = np.array([180, 255, 255], dtype=np.uint8)
 
-lower_blue = np.array([110, 50, 50], dtype=np.uint8)
-upper_blue = np.array([130, 255, 255], dtype=np.uint8)
+lower_blue1 = np.array([110, 50, 50], dtype=np.uint8)
+upper_blue1 = np.array([130, 255, 255], dtype=np.uint8)
+
+lower_blue2 = np.array([104, 216, 147], dtype=np.uint8)
+upper_blue2 = np.array([110, 255, 255], dtype=np.uint8)
 
 images = os.listdir(dataset_folder)
 
@@ -34,7 +37,9 @@ for image_name in images:
     mask2 = cv2.inRange(hsv_img, lower_red2, upper_red2)
     red_mask = cv2.bitwise_or(mask1, mask2)
     
-    blue_mask = cv2.inRange(hsv_img, lower_blue, upper_blue)
+    mask3 = cv2.inRange(hsv_img, lower_blue1, upper_blue1)
+    mask4 = cv2.inRange(hsv_img, lower_blue2, upper_blue2)
+    blue_mask = cv2.bitwise_or(mask3, mask4)
 
     # Find contours in the masks
     red_contours, _ = cv2.findContours(red_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
@@ -67,7 +72,7 @@ for image_name in images:
             circularity = cv2.contourArea(contour) / (np.pi * radius * radius)
             
             # Set a circularity threshold to filter out non-circular objects
-            circularity_threshold = 0.45
+            circularity_threshold = 0.47
             
             if circularity >= circularity_threshold:
                 cv2.circle(img, center, radius, (255, 0, 0), 2)
