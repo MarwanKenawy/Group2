@@ -5,11 +5,9 @@
 - Ultrasonic
 - IR sensor
 - Fuse
+  ![l298N](https://github.com/MarwanKenawy/Group2/assets/143660971/afe2e2d6-c99d-49d6-a9c5-4579bdd291bf)
 - L298N
-- 
-![l298N](https://github.com/MarwanKenawy/Group2/assets/143660971/afe2e2d6-c99d-49d6-a9c5-4579bdd291bf)
 
--  ![download](https://github.com/MarwanKenawy/Group2/assets/69699199/efc29303-1f8c-4f61-aa12-991cf2257b8e)
 
 ## Schematic
 ![a9997062-f396-4742-960f-67bca43c6fa0](https://github.com/MarwanKenawy/Group2/assets/69699199/b08c10a5-70c8-4cc2-88cf-b97aaff46204)
