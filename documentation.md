@@ -12,5 +12,6 @@
 ## Schematic
 ![a9997062-f396-4742-960f-67bca43c6fa0](https://github.com/MarwanKenawy/Group2/assets/69699199/b08c10a5-70c8-4cc2-88cf-b97aaff46204)
 ## Back
-![picture](https://github.com/MarwanKenawy/Group2/assets/143660971/70986805-73f9-4e00-b42b-7d8bed242938)
+![picture](https://github.com/MarwanKenawy/Group2/assets/143660971/90d5ea0e-f6fe-4b65-bc52-3b318fe10f4f)
+
 
