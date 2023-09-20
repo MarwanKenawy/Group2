@@ -3,7 +3,7 @@
 ## Components
 - Arduino nano
 - Ultrasonic
-- IR sensors
+- IR sensor
 - Fuse
 - i298 ![download](https://github.com/MarwanKenawy/Group2/assets/69699199/efc29303-1f8c-4f61-aa12-991cf2257b8e)
 
