@@ -10,7 +10,8 @@
 
 
 ## Schematic
-![a9997062-f396-4742-960f-67bca43c6fa0](https://github.com/MarwanKenawy/Group2/assets/69699199/b08c10a5-70c8-4cc2-88cf-b97aaff46204)
+![schematic](https://github.com/MarwanKenawy/Group2/assets/143660971/53d33335-951b-42fe-969d-3ea46a19ced2)
+
 ## Back
 ![picture](https://github.com/MarwanKenawy/Group2/assets/143660971/90d5ea0e-f6fe-4b65-bc52-3b318fe10f4f)
 
