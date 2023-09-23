@@ -43,10 +43,14 @@ MIA Robotics Training: Group 2
 - Task 9: Fix EVE
     - 9.1: Altium Symphony
     > Design of **PCB** that includes:
-        > - Microcontroller such as (Arduino Nano, STM32)
-        > - Power inlet such as(power jack, rosetta)
-        > - Interface with motor driver (L298N) and sensors such as (ultrasonic, IR, IMU) using base data or pin header
-        > - Protection of the circuit from (inverse current, short circuit)
+    >
+    > Microcontroller such as (Arduino Nano, STM32)
+    >
+    > Power inlet such as(power jack, rosetta)
+    >
+    > Interface with motor driver (L298N) and sensors such as (ultrasonic, IR, IMU) using base data or pin header
+    >
+    > Protection of the circuit from (inverse current, short circuit)
     >
     > Create SID to the system including PCB and Wiring
 
